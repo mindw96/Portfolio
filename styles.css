@@ -1,0 +1,243 @@
+:root {
+  color-scheme: light;
+  --background: #ffffff;
+  --text: #1f2937;
+  --text-strong: #111827;
+  --text-muted: #4b5563;
+  --surface: #f3f4f6;
+  --surface-hover: #e5e7eb;
+  --border: #1f2937;
+  --link-decoration: #d1d5db;
+  --link-decoration-hover: #3b82f6;
+  --badge-blue: #dbeafe;
+  --badge-blue-text: #1e40af;
+  --author-decoration: rgba(59, 130, 246, 0.3);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-width: 320px;
+}
+
+body {
+  margin: 0;
+  background: var(--background);
+  color: var(--text);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+a {
+  color: inherit;
+}
+
+a:focus-visible {
+  outline: 2px solid var(--text-strong);
+  outline-offset: 3px;
+}
+
+main {
+  min-height: 100vh;
+  padding: 64px 24px;
+  background: var(--background);
+  transition: background-color 300ms, color 300ms;
+}
+
+.resume {
+  width: 100%;
+  max-width: 896px;
+  margin: 0 auto;
+}
+
+.intro {
+  margin-bottom: 64px;
+  text-align: center;
+}
+
+.intro h1 {
+  margin: 0 0 16px;
+  color: var(--text-strong);
+  font-size: 48px;
+  line-height: 1;
+  font-weight: 700;
+  letter-spacing: 0;
+}
+
+.intro p {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: 500;
+}
+
+section {
+  margin-bottom: 48px;
+}
+
+h2 {
+  margin: 0 0 24px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--border);
+  color: var(--text);
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 700;
+  letter-spacing: 0;
+}
+
+.entry-list,
+.tag-list,
+.contact-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.entry-list {
+  display: grid;
+  gap: 16px;
+}
+
+.entry {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 16px;
+}
+
+.badge {
+  display: inline-flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  min-width: 120px;
+  padding: 4px 12px;
+  border-radius: 9999px;
+  background: var(--surface);
+  color: var(--text-muted);
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 600;
+}
+
+.badge-publication {
+  min-width: 100px;
+  background: var(--badge-blue);
+  color: var(--badge-blue-text);
+  font-weight: 700;
+}
+
+.entry-content {
+  min-width: 0;
+  flex: 1;
+}
+
+.entry-content h3 {
+  margin: 0;
+  color: var(--text-strong);
+  font-size: 18px;
+  line-height: 22.5px;
+  font-weight: 700;
+  letter-spacing: 0;
+}
+
+.institution {
+  margin: 4px 0 0;
+  color: var(--text-muted);
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.entry-content .publication-title {
+  margin-bottom: 8px;
+  line-height: 24px;
+}
+
+.publication-title a {
+  text-decoration-color: var(--link-decoration);
+  text-underline-offset: 4px;
+  transition: text-decoration-color 150ms;
+}
+
+.publication-title a:hover {
+  text-decoration-color: var(--link-decoration-hover);
+}
+
+.authors {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 14px;
+  line-height: 22px;
+}
+
+.authors strong {
+  color: var(--text-strong);
+  text-decoration: underline;
+  text-decoration-color: var(--author-decoration);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 2px;
+}
+
+.tag-list,
+.contact-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.tag-list li,
+.contact-list a {
+  padding: 8px 16px;
+  border-radius: 8px;
+  background: var(--surface);
+  color: var(--text);
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 500;
+}
+
+.contact-list {
+  padding: 16px;
+}
+
+.contact-list a {
+  display: inline-flex;
+  text-decoration: none;
+  transition: background-color 150ms;
+}
+
+.contact-list a:hover {
+  background: var(--surface-hover);
+}
+
+@media (max-width: 639px) {
+  .intro h1 {
+    font-size: 36px;
+    line-height: 40px;
+  }
+
+  .entry {
+    flex-direction: column;
+    gap: 12px;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+    --background: #111827;
+    --text: #f3f4f6;
+    --text-strong: #ffffff;
+    --text-muted: #9ca3af;
+    --surface: #1f2937;
+    --surface-hover: #374151;
+    --border: #1f2937;
+    --link-decoration: #4b5563;
+    --link-decoration-hover: #60a5fa;
+    --badge-blue: #1e3a8a;
+    --badge-blue-text: #bfdbfe;
+  }
+}
