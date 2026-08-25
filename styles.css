@@ -6,7 +6,6 @@
   --text-muted: #4b5563;
   --surface: #f3f4f6;
   --border: #1f2937;
-  --border-soft: #d1d5db;
   --accent: #2563eb;
   --link-decoration: #d1d5db;
   --link-decoration-hover: #3b82f6;
@@ -194,7 +193,6 @@ h2 {
   align-items: center;
   gap: 10px;
   padding: 14px 0 4px;
-  border-top: 1px solid var(--border-soft);
   color: var(--text-strong);
   font-size: 16px;
   line-height: 24px;
@@ -206,7 +204,7 @@ h2 {
   height: 6px;
   flex: 0 0 auto;
   border-radius: 2px;
-  background: var(--accent);
+  background: var(--text-strong);
   content: "";
 }
 
@@ -218,13 +216,7 @@ address {
   display: grid;
   gap: 4px;
   padding: 14px 0 4px;
-  border-top: 1px solid var(--border-soft);
   text-decoration: none;
-  transition: border-color 150ms;
-}
-
-.contact-list a:hover {
-  border-color: var(--accent);
 }
 
 .contact-label {
@@ -277,7 +269,6 @@ address {
     --text-muted: #9ca3af;
     --surface: #1f2937;
     --border: #1f2937;
-    --border-soft: #374151;
     --accent: #60a5fa;
     --link-decoration: #4b5563;
     --link-decoration-hover: #60a5fa;
