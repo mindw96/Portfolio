@@ -194,7 +194,9 @@ h2 {
 }
 
 .contact-list {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: minmax(0, 1fr) repeat(3, max-content);
+  align-items: end;
+  gap: 12px;
 }
 
 .interest-list li {
@@ -221,10 +223,10 @@ address {
   font-style: normal;
 }
 
-.contact-list a {
+.contact-email-link {
   display: grid;
   gap: 4px;
-  padding: 14px 0 4px;
+  padding: 10px 0 4px;
   text-decoration: none;
 }
 
@@ -246,9 +248,39 @@ address {
   transition: color 150ms, text-decoration-color 150ms;
 }
 
-.contact-list a:hover .contact-value {
+.contact-email-link:hover .contact-value {
   color: var(--accent);
   text-decoration-color: var(--accent);
+}
+
+.contact-button {
+  display: inline-flex;
+  min-height: 42px;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 9px 14px;
+  border: 1px solid var(--text-muted);
+  border-radius: 6px;
+  background: transparent;
+  color: var(--text-strong);
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 700;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background-color 150ms, border-color 150ms, color 150ms;
+}
+
+.contact-button:hover {
+  border-color: var(--accent);
+  background: var(--surface);
+  color: var(--accent);
+}
+
+.external-arrow {
+  font-size: 16px;
+  line-height: 1;
 }
 
 @media (max-width: 639px) {
@@ -266,6 +298,11 @@ address {
   .contact-list {
     grid-template-columns: 1fr;
     gap: 12px;
+  }
+
+  .contact-button {
+    width: 100%;
+    justify-content: space-between;
   }
 }
 
