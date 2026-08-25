@@ -186,8 +186,15 @@ h2 {
 .interest-list,
 .contact-list {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 24px;
+}
+
+.interest-list {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.contact-list {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
 .interest-list li {
