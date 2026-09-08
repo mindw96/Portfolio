@@ -9,8 +9,6 @@
   --accent: #2563eb;
   --link-decoration: #d1d5db;
   --link-decoration-hover: #3b82f6;
-  --badge-blue: #dbeafe;
-  --badge-blue-text: #1e40af;
   --author-decoration: rgba(59, 130, 246, 0.3);
 }
 
@@ -125,11 +123,17 @@ h2 {
   font-weight: 600;
 }
 
-.badge-publication {
-  min-width: 100px;
-  background: var(--badge-blue);
-  color: var(--badge-blue-text);
-  font-weight: 700;
+.publication-entry {
+  display: block;
+}
+
+.publication-venue {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--text-muted);
+  font-size: 13px;
+  line-height: 20px;
+  font-weight: 600;
 }
 
 .entry-content {
@@ -315,7 +319,5 @@ address {
     --accent: #60a5fa;
     --link-decoration: #4b5563;
     --link-decoration-hover: #60a5fa;
-    --badge-blue: #1e3a8a;
-    --badge-blue-text: #bfdbfe;
   }
 }
