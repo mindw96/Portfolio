@@ -4,7 +4,6 @@
   --text: #1f2937;
   --text-strong: #111827;
   --text-muted: #4b5563;
-  --surface: #f3f4f6;
   --border: #1f2937;
   --accent: #2563eb;
   --link-decoration: #d1d5db;
@@ -102,31 +101,11 @@ h2 {
 }
 
 .entry {
-  display: flex;
-  align-items: flex-start;
-  gap: 20px;
+  display: block;
   padding: 16px;
 }
 
-.badge {
-  display: inline-flex;
-  flex-shrink: 0;
-  align-items: center;
-  justify-content: center;
-  min-width: 120px;
-  padding: 4px 12px;
-  border-radius: 9999px;
-  background: var(--surface);
-  color: var(--text-muted);
-  font-size: 12px;
-  line-height: 16px;
-  font-weight: 600;
-}
-
-.publication-entry {
-  display: block;
-}
-
+.education-period,
 .publication-venue {
   display: block;
   margin-bottom: 8px;
@@ -138,28 +117,15 @@ h2 {
 
 .entry-content {
   min-width: 0;
-  flex: 1;
 }
 
 .entry-content h3 {
-  margin: 0;
+  margin: 0 0 8px;
   color: var(--text-strong);
   font-size: 18px;
-  line-height: 22.5px;
+  line-height: 24px;
   font-weight: 700;
   letter-spacing: 0;
-}
-
-.institution {
-  margin: 4px 0 0;
-  color: var(--text-muted);
-  font-size: 16px;
-  line-height: 24px;
-}
-
-.entry-content .publication-title {
-  margin-bottom: 8px;
-  line-height: 24px;
 }
 
 .publication-title a {
@@ -172,6 +138,7 @@ h2 {
   text-decoration-color: var(--link-decoration-hover);
 }
 
+.institution,
 .authors {
   margin: 0;
   color: var(--text-muted);
@@ -290,11 +257,6 @@ address {
     line-height: 40px;
   }
 
-  .entry {
-    flex-direction: column;
-    gap: 12px;
-  }
-
   .interest-list,
   .contact-list {
     grid-template-columns: 1fr;
@@ -314,7 +276,6 @@ address {
     --text: #f3f4f6;
     --text-strong: #ffffff;
     --text-muted: #9ca3af;
-    --surface: #1f2937;
     --border: #1f2937;
     --accent: #60a5fa;
     --link-decoration: #4b5563;
